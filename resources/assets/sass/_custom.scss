@@ -1,0 +1,237 @@
+#header {
+  width: 100%;
+  height: 150px;
+  background-color: #616161;
+}
+
+@keyframes appear {
+    from {
+      -ms-transform: translate(0px, -10px); /* IE 9 */
+      -webkit-transform: translate(0px, -10px); /* Safari */
+      transform: translate(0px, -10px);
+      opacity: 0;
+          }
+    to {
+      -ms-transform: translate(0px, 0px); /* IE 9 */
+      -webkit-transform: translate(0px, 0px); /* Safari */
+      transform: translate(0px, 0px);
+      opacity: 100;
+    }
+}
+
+@keyframes pushDown {
+    from {
+      -ms-transform: translate(0px, -5px); /* IE 9 */
+      -webkit-transform: translate(0px, -5px); /* Safari */
+      transform: translate(0px, -5px);
+          }
+    to {
+      -ms-transform: translate(0px, 0px); /* IE 9 */
+      -webkit-transform: translate(0px, 0px); /* Safari */
+      transform: translate(0px, 0px);
+    }
+}
+
+.navbar_item {
+  font-size: 1em;
+  color: white;
+  margin-top: 16.5px;
+  display: inline-block;
+}
+
+.navbar_item:hover {
+  color: white;
+}
+
+.navbar_item_container:hover {
+  background-color: #3c3c3c;
+}
+
+.navbar_item_container {
+  width: 80px;
+  text-align: center;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.nav_bar {
+  display: inline-block;
+}
+
+.header_title {
+  display: inline-block;
+  height: 50px;
+  float: left;
+  margin-top: 100px;
+}
+
+.header_title h1 {
+  color: white;
+  margin: 0px;
+  margin-top: 15px;
+  animation-name: pushDown;
+  animation-duration: 3s;
+}
+
+
+#header_title_logo {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  float: left;
+  background-color: #f5f8fa;
+  margin-top: 25px;
+  margin-left: 15px;
+  border: 2px solid black;
+  margin-right: 5px;
+}
+
+#nav_bar_container {
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.body {
+  max-height: fit-content;
+}
+
+#footer {
+  width: 100%;
+  height: fit-content;
+  background-color: #0c0c0c;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  bottom: 0;
+  position: absolute;
+}
+
+.menu_item_container {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: block;
+}
+
+.menu_item_container a {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0px;
+  margin-top: 3.5px;
+  display: inline-block;
+}
+
+.menu_item_container:hover {
+  background-color: #101010;
+}
+
+.menu_header_container {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: block;
+}
+
+#footer_address {
+  text-align: left;
+  width: 155px;
+  height: fit-content;
+}
+
+.menu_header_container p {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0px;
+  margin-top: 3.5px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.menu_container {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+  margin-right: 100px;
+}
+
+#footer_address_container {
+  float: left;
+  margin-right: 0px;
+}
+
+#footer_icon_area {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  margin-top: 90px;
+  float: right;
+}
+
+#footer_icon_area p {
+  font-size: 4em;
+  color: white;
+  margin: 0px;
+  display: inline-block;
+  float: right;
+}
+
+#footer_icon {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  display: inline-block;
+  float: left;
+  margin-top: 22px;
+  border: 2px solid darkgoldenrod;
+}
+
+@media screen and (max-width: 768px) {
+    #header_title_logo {
+      display: none;
+    }
+
+    .header_title h1 {
+      font-size: 1em;
+      margin-top: 35px;
+    }
+
+    .header_title {
+      margin-top: 25px;
+    }
+
+    .navbar_item_container {
+      min-width: 30px;
+      width: fit-content;
+      height: 20px;
+      padding: 2px;
+    }
+
+    .navbar_item {
+      font-size: 0.625em;
+      margin-top: 3.5px;
+    }
+
+    #header {
+      height: 75px;
+    }
+
+    #footer_icon_area {
+      display: none !important;
+    }
+
+    #footer_address_container {
+      float: right !important;
+    }
+
+    .menu_container {
+      margin: 0px;
+    }
+
+}

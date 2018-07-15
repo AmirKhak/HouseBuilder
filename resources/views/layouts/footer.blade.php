@@ -1,0 +1,30 @@
+<div id="footer">
+  @php
+    $navbar_items = array("HOME", "ORDER", "ABOUT US", "CONTACT", "FAQ", "SIGN IN");
+  @endphp
+  <div class="menu_container">
+    <div class="menu_header_container">
+      <p><strong>MENU</strong></p>
+    </div>
+    @foreach ($navbar_items as $navbar_item)
+      <div class="menu_item_container">
+        <a href="">{{$navbar_item}}</a>
+      </div>
+    @endforeach
+  </div>
+  <div id="footer_address_container" class="menu_container">
+    <div id="footer_address" class="menu_header_container">
+      <p><strong>HouseBuilder</strong></p>
+      <p>info@HouseBuilder.com</p><br/>
+      <p>Hedgemans Rd</p>
+      <p>Dagenham</p>
+      <p>London</p>
+      <p>RM9</p>
+      <p>020 8995 3575</p>
+    </div>
+  </div>
+  <div id=footer_icon_area>
+    <img id="footer_icon" src="/images/building_icon.png">
+    <p>HouseBuilder</p>
+  </div>
+</div>
