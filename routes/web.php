@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/', 'PagesController@main');
+Route::get('/', 'PagesController@home');
+Route::get('/order', 'OrdersController@index');

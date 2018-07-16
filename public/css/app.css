@@ -10453,6 +10453,26 @@ a.text-dark:focus {
   }
 }
 
+@-webkit-keyframes delayedPopup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes delayedPopup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
 @-webkit-keyframes pushDown {
   from {
     /* IE 9 */
@@ -10501,11 +10521,15 @@ a.text-dark:focus {
 }
 
 .navbar_item_container {
-  width: 80px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
   height: 50px;
   display: inline-block;
   overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nav_bar {
@@ -10517,6 +10541,7 @@ a.text-dark:focus {
   height: 50px;
   float: left;
   margin-top: 100px;
+  margin-left: 165px;
 }
 
 .header_title h1 {
@@ -10539,6 +10564,7 @@ a.text-dark:focus {
   margin-left: 15px;
   border: 2px solid black;
   margin-right: 5px;
+  position: absolute;
 }
 
 #nav_bar_container {
@@ -10558,23 +10584,24 @@ a.text-dark:focus {
 
 #footer {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 240px;
   background-color: #0c0c0c;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  bottom: 0;
-  position: absolute;
+  display: block;
+  overflow: hidden;
 }
 
 .menu_item_container {
   width: 100px;
   height: 30px;
   text-align: center;
-  display: block;
+  -webkit-animation-name: delayedPopup;
+          animation-name: delayedPopup;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .menu_item_container a {
@@ -10660,6 +10687,84 @@ a.text-dark:focus {
   border: 2px solid darkgoldenrod;
 }
 
+#home_body {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: ivory;
+  overflow: hidden;
+}
+
+#home_body_header {
+  color: black;
+  width: 300px;
+  height: 300px;
+  margin-top: 25px;
+}
+
+#home_body_title {
+  width: 100%;
+  height: 300px;
+  margin-left: 100px;
+  display: inline-block;
+  float: left;
+  background-image: url("/images/painting_wall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#home_body_middle {
+  background-color: black;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  float: right;
+  margin-right: 100px;
+}
+
+#middle_desc {
+  color: white;
+  float: right;
+  margin-left: 100px;
+  margin-top: 25px;
+}
+
+#middle_desc h3 {
+  font-size: 6em;
+  margin: none;
+}
+
+#home_body_footer {
+  width: 100%;
+  height: 400px;
+  background-image: url("/images/house_pavement.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+}
+
+#footer_desc {
+  color: white;
+  float: left;
+  margin-left: 100px;
+  margin-top: 165px;
+}
+
+#footer_desc h3 {
+  font-size: 4em;
+}
+
+#footer_desc p {
+  font-size: 3em;
+}
+
 @media screen and (max-width: 768px) {
   #header_title_logo {
     display: none;
@@ -10702,6 +10807,52 @@ a.text-dark:focus {
 
   .menu_container {
     margin: 0px;
+  }
+
+  #middle_desc h3 {
+    font-size: 2em;
+  }
+
+  #home_body_title {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+    display: inline-block;
+    background-image: none;
+    background-color: violet;
+  }
+
+  #home_body_middle {
+    margin-right: 0px;
+    float: left;
+  }
+
+  #middle_desc {
+    margin: 0px;
+  }
+
+  .header_title {
+    margin: 0px;
+  }
+
+  #home_body_footer {
+    background-image: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: orange;
+  }
+
+  #footer_desc {
+    margin: 0px;
+  }
+
+  #footer_desc h3 {
+    font-size: 2em;
+  }
+
+  #footer_desc p {
+    font-size: 1em;
   }
 }
 
