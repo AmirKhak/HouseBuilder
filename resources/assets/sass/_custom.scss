@@ -457,6 +457,10 @@
   text-align: center;
 }
 
+#about_us_body h2 {
+  margin: 0px;
+}
+
 #about_us_desc {
   width: 60%;
   height: fit-content;
@@ -468,7 +472,72 @@
 }
 
 #contact_body {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  padding-top: 25px;
+}
 
+#contact_body_topbox {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+
+#contact_body_lowerbox {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-image: url('/images/england_map.png');
+  background-size: cover;
+}
+
+#contact_body_content {
+  width: 80%;
+  position: absolute;
+  height: 70%;
+  border-radius: 10px;
+  background-color: #808080b0;
+  margin-top: -550px;
+  margin-left: 10%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#contact_body_content_left {
+  width: 49.5%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  border-right: 1px solid white;
+  padding: 5px;
+}
+
+#contact_body_content_left img {
+  width: 100%;
+  height: 100%;
+}
+
+#contact_body_content_right {
+  width: 49.5%;
+  height: 100%;
+  float: right;
+  display: inline-block;
+}
+
+#contact_body_content_right h2 {
+  margin: 0px;
+  display: block;
+  font-size: 3em;
+  color: white;
+}
+
+#contact_body_content_right p {
+  margin: 0px;
+  display: block;
+  font-size: 2em;
+  color: lawngreen;
 }
 
 @media screen and (max-width: 768px) {
@@ -576,6 +645,40 @@
     #about_us_desc {
       width: 90%;
       font-size: 1.75em;
+    }
+
+    #contact_body_content {
+      width: 80%;
+      position: absolute;
+      height: 70%;
+      border-radius: 10px;
+      background-color: #808080b0;
+      margin-top: -550px;
+      margin-left: 10%;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    #contact_body_content_left {
+      width: 100%;
+      height: 49.5%;
+      display: inline-block;
+      padding: 5px;
+      border: none;
+    }
+
+    #contact_body_content_right {
+      width: 100%;
+      height: 49.5%;
+      text-align: center;
+    }
+
+    #contact_body_content_right h2 {
+      font-size: 1.625em;
+    }
+
+    #contact_body_content_right p {
+      font-size: 1em;
     }
 
 }
