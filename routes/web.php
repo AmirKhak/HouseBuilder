@@ -13,3 +13,5 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/order', 'OrdersController@index');
+Route::get('/about_us', 'PagesController@about_us');
+Route::get('/contact', 'PagesController@contact');

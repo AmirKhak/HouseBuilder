@@ -447,6 +447,30 @@
   @include dropdown(-100%, 0px);
 }
 
+#about_us_body {
+  width: 100%;
+  height: fit-content;
+//  background-color: #fff1a3;
+  background-image: url('/images/unfinished_house.jpg');
+  background-size: cover;
+  padding: 25px;
+  text-align: center;
+}
+
+#about_us_desc {
+  width: 60%;
+  height: fit-content;
+  overflow: hidden;
+  margin: auto;
+  font-size: 2em;
+  background-color: #f5f5dc8a;
+  border-radius: 10px;
+}
+
+#contact_body {
+
+}
+
 @media screen and (max-width: 768px) {
     #header_title_logo {
       display: none;
@@ -547,6 +571,11 @@
       height: 46px;
       margin-top: 88px;
       display: inline-block;
+    }
+
+    #about_us_desc {
+      width: 90%;
+      font-size: 1.75em;
     }
 
 }
