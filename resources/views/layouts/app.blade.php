@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
+    @php
+      $navbar_items = array("HOME", "ORDER", "ABOUT US", "CONTACT", "FAQ", "SIGN IN");
+      $navbar_links = array("/", "/order", "/about_us", "/contact", "/faq", "/login");
+    @endphp
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')

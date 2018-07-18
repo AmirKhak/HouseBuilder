@@ -10505,19 +10505,45 @@ a.text-dark:focus {
   }
 }
 
-.navbar_item {
+.navbar_item,
+#auth_dropdown_after_link {
   font-size: 1em;
   color: white;
   margin-top: 16.5px;
   display: inline-block;
 }
 
-.navbar_item:hover {
+.navbar_item:hover,
+#auth_dropdown_after_link:hover {
   color: white;
 }
 
 .navbar_item_container:hover {
   background-color: #3c3c3c;
+}
+
+#auth_dropdown {
+  display: inline-block;
+  height: 50px;
+  width: inherit;
+}
+
+#auth_dropdown_after_link {
+  display: none;
+}
+
+#auth_dropdown_after_link input {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+#auth_dropdown:hover #auth_dropdown_after_link {
+  display: inline-block;
+}
+
+#auth_dropdown:hover #auth_dropdown_before_link {
+  display: none;
 }
 
 .navbar_item_container {
@@ -10602,6 +10628,12 @@ a.text-dark:focus {
           animation-name: delayedPopup;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+}
+
+.menu_item_container input {
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .menu_item_container a {
@@ -11102,6 +11134,10 @@ a.text-dark:focus {
   text-align: center;
 }
 
+#contact_body_topbox h2 {
+  color: #dc3545;
+}
+
 #contact_body_lowerbox {
   width: 100%;
   height: 500px;
@@ -11154,7 +11190,22 @@ a.text-dark:focus {
   margin: 0px;
   display: block;
   font-size: 2em;
-  color: lawngreen;
+  color: #dc3545;
+}
+
+.auth_page {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-image: url("/images/tools_clipart.jpg");
+  background-size: repeat;
+}
+
+.auth_page .card {
+  background-color: #fffffff2;
 }
 
 @media screen and (max-width: 768px) {
@@ -11180,7 +11231,17 @@ a.text-dark:focus {
     padding: 2px;
   }
 
-  .navbar_item {
+  #auth_dropdown {
+    min-width: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 20px;
+    padding: 2px;
+  }
+
+  .navbar_item,
+  #auth_dropdown_after_link {
     font-size: 0.625em;
     margin-top: 3.5px;
   }

@@ -81,6 +81,31 @@
   background-color: #3c3c3c;
 }
 
+#auth_dropdown {
+  display: inline-block;
+  height: 50px;
+  width: inherit;
+}
+
+#auth_dropdown_after_link {
+  @extend .navbar_item;
+  display: none;
+}
+
+#auth_dropdown_after_link input {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+#auth_dropdown:hover #auth_dropdown_after_link {
+  display: inline-block;
+}
+
+#auth_dropdown:hover #auth_dropdown_before_link {
+  display: none;
+}
+
 .navbar_item_container {
   width: fit-content;
   text-align: center;
@@ -156,6 +181,12 @@
   text-align: center;
   animation-name: delayedPopup;
   animation-duration: 3s;
+}
+
+.menu_item_container input {
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .menu_item_container a {
@@ -485,6 +516,10 @@
   text-align: center;
 }
 
+#contact_body_topbox h2 {
+  color: #dc3545;
+}
+
 #contact_body_lowerbox {
   width: 100%;
   height: 500px;
@@ -537,7 +572,20 @@
   margin: 0px;
   display: block;
   font-size: 2em;
-  color: lawngreen;
+  color: #dc3545;
+}
+
+.auth_page {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: fit-content;
+  background-image: url('/images/tools_clipart.jpg');
+  background-size: repeat;
+}
+
+.auth_page .card {
+  background-color: #fffffff2;
 }
 
 @media screen and (max-width: 768px) {
@@ -555,6 +603,13 @@
     }
 
     .navbar_item_container {
+      min-width: 30px;
+      width: fit-content;
+      height: 20px;
+      padding: 2px;
+    }
+
+    #auth_dropdown {
       min-width: 30px;
       width: fit-content;
       height: 20px;
