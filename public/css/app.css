@@ -11208,6 +11208,30 @@ a.text-dark:focus {
   background-color: #fffffff2;
 }
 
+#modal_content {
+  border-radius: 10px;
+}
+
+#modal_form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+  margin: auto;
+}
+
+#faq_body {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   #header_title_logo {
     display: none;

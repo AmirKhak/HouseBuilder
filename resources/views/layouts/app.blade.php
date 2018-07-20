@@ -9,6 +9,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('js/app.js')}}" type="application/javascript">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
     @php
@@ -16,6 +18,7 @@
       $navbar_links = array("/", "/order", "/about_us", "/contact", "/faq", "/login");
     @endphp
     @include('layouts.header')
+    @include('layouts.messages')
     @yield('content')
     @include('layouts.footer')
   </body>

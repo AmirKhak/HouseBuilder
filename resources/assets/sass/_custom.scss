@@ -588,6 +588,26 @@
   background-color: #fffffff2;
 }
 
+#order_create_modal {}
+
+#modal_content {
+  border-radius: 10px;
+}
+
+#modal_form {
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  margin: auto;
+}
+
+#faq_body {
+  width: 100%;
+  height: fit-content;
+  padding: 15px;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     #header_title_logo {
       display: none;
