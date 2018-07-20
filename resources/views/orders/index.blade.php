@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content')
   <div id="orders_body">
-    @php
-      $order_group = "";
-    @endphp
     <h2>Choose the section you need</h2>
     <div id="options_container">
       <div id="option_1" class="option_container">
@@ -79,7 +76,6 @@
     </div>
   </div>
 
-  </div>
   <script>
     function createModal($group) {
       document.getElementById('order_create_modal').style = "display: block;";

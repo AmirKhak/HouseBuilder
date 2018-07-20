@@ -14,7 +14,10 @@
 Route::get('/', 'PagesController@home');
 Route::get('/about_us', 'PagesController@about_us');
 Route::get('/contact', 'PagesController@contact');
-Route::resource('faq', 'FaqsController', array('only' => array('index', 'store')));
+Route::get('/users', 'PagesController@users');
+Route::get('/orders', 'PagesController@orders');
+
+Route::resource('faq', 'FaqsController', array('only' => array('index', 'store', 'destroy')));
 Route::resource('order', 'OrdersController', array('only' => array('index', 'store')));
 
 Auth::routes();

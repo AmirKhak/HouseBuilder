@@ -19,6 +19,7 @@ class OrdersController extends Controller
 
     public function store(Request $request)
     {
+      if (Auth::check()) {
         $this->validate($request, [
           'title' => 'required',
           'description' => 'required'
@@ -30,7 +31,8 @@ class OrdersController extends Controller
         $order->description = $request->input('description');
         $order->save();
 
-        return redirect('/order')->with('success', 'Your order has been sent!');
+        return redirect('/order')->with('success', 'Your order has been sent!');        
+      }
     }
 
 }

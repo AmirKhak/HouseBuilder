@@ -604,8 +604,35 @@
 #faq_body {
   width: 100%;
   height: fit-content;
-  padding: 15px;
+  padding: 25px;
   text-align: center;
+  min-height: 400px;
+  background-color: burlywood;
+}
+
+#faq_body_button {
+  width: fit-content;
+  height: 20px;
+  float: left;
+  display: block;
+  margin: 5px;
+}
+
+#faq_body_button button {
+  width: fit-content;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+#faqs_container {
+  width: 100%;
+  height: fit-content;
+
+}
+
+#faq_container {
+
 }
 
 @media screen and (max-width: 768px) {
