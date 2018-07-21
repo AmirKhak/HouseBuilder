@@ -8,7 +8,16 @@
       <div class="order_container">
         <p><strong>Group: </strong>{{$order->group}}</p>
         <p><strong>Subject: </strong>{{$order->title}}</p>
-
+        <p><strong>Status: </strong>
+          @php
+            $status = "Not Finished";
+            if ($order->done) {
+              $status = "Done";
+            }
+          @endphp
+          {{$status}}
+        </p>
+        
       </div>
     @endforeach
   </div>

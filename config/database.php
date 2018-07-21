@@ -1,5 +1,11 @@
 <?php
 
+$url = parse_url(getenv('DATABASE_URL'));
+$user = $url["user"]??null;
+$password = $url["pass"]??null;
+$host = $url["host"]??null;
+$databse = substr($url["path"], 1)??null;
+
 return [
 
     /*
@@ -13,7 +19,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql_production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,6 +71,17 @@ return [
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
+        ],
+
+        'pgsql_production' => [
+          'driver' => 'pgsql',
+          'host' => $host,
+          'database' => $databse,
+          'username' => $user,
+          'password' => $password,
+          'charset' => 'utf8',
+          'prefix' => '',
+          'schema' => 'public',
         ],
 
         'sqlsrv' => [
