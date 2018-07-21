@@ -57,19 +57,27 @@
       <div id="modal_content" class="w3-modal-content">
         <div class="w3-container">
           <div id="modal_form">
-            <span onclick="document.getElementById('order_create_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-            {!! Form::open(['action' => 'OrdersController@store', 'method' => 'POST']) !!}
-              {{Form::hidden('group', '', ['id' => 'group_field'])}}
-              <div class="form-group">
-                {{Form::label('title', 'Subject')}}
-                {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Subject'])}}
-              </div>
-              <div class="form-group">
-                {{Form::label('description', 'Description')}}
-                {{Form::textarea('description', '', ['class' => 'form-control', 'placeholder' => 'Description'])}}
-              </div>
-              {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-            {!! Form::close() !!}
+            @if (Auth::check())
+              @php
+                $customer = Auth::user();
+              @endphp
+              <span onclick="document.getElementById('order_create_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              {!! Form::open(['action' => 'OrdersController@store', 'method' => 'POST']) !!}
+                {{Form::hidden('group', '', ['id' => 'group_field'])}}
+                {{Form::hidden('user_id', $customer->id, ['id' => 'group_field'])}}
+                <div class="form-group">
+                  {{Form::label('title', 'Subject')}}
+                  {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Subject'])}}
+                </div>
+                <div class="form-group">
+                  {{Form::label('description', 'Description')}}
+                  {{Form::textarea('description', '', ['class' => 'form-control', 'placeholder' => 'Description'])}}
+                </div>
+                {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+              {!! Form::close() !!}
+            @else
+              <h2>Sorry, You should sign in.</h2>
+            @endif
           </div>
         </div>
       </div>

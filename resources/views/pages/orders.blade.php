@@ -1,0 +1,15 @@
+@extends('layouts.app')
+
+@section('content')
+  <div id="order_body">
+    @foreach($orders as $order)
+      <!-- @php
+      @endphp -->
+      <div class="order_container">
+        <p><strong>Group: </strong>{{$order->group}}</p>
+        <p><strong>Subject: </strong>{{$order->title}}</p>
+
+      </div>
+    @endforeach
+  </div>
+@endsection

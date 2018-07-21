@@ -24,15 +24,15 @@ class PagesController extends Controller
 
   public function users() {
     if ($this->isCurrentUserAdmin()) {
-      $users = User::all()->latest();
-      return view('pages.users');
+      $users = User::latest()->get();
+      return view('pages.users')->with('users', $users);
     }
   }
 
   public function orders() {
     if ($this->isCurrentUserAdmin()) {
-      $orders = Order::all()->latest();
-      return view('pages.orders');
+      $orders = Order::latest()->get();
+      return view('pages.orders')->with('orders', $orders);
     }
   }
 

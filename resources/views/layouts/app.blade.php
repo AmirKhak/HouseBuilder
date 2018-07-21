@@ -14,8 +14,14 @@
   </head>
   <body>
     @php
-      $navbar_items = array("HOME", "ORDER", "ABOUT US", "CONTACT", "FAQ", "SIGN IN");
-      $navbar_links = array("/", "/order", "/about_us", "/contact", "/faq", "/login");
+      $navbar_items = array("HOME", "ORDER", "ABOUT US", "CONTACT", "FAQ", "USERS", "ORDERS", "SIGN IN");
+      $navbar_links = array("/", "/order", "/about_us", "/contact", "/faq", "/users", "/orders", "/login");
+      $is_current_user_admin = false;
+      if (Auth::check()) {
+        if (Auth::user()->admin) {
+          $is_current_user_admin = true;
+        }
+      }
     @endphp
     @include('layouts.header')
     @include('layouts.messages')

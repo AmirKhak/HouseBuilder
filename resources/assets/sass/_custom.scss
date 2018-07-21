@@ -533,7 +533,7 @@
   position: absolute;
   height: 70%;
   border-radius: 10px;
-  background-color: #808080b0;
+  background-color: #808080;
   margin-top: -550px;
   margin-left: 10%;
   padding: 10px;
@@ -613,16 +613,16 @@
 
 #faq_body_button {
   width: fit-content;
-  height: 20px;
+  height: 30px;
   float: left;
   display: block;
-  margin: 5px;
+  margin-top: 5px;
 }
 
 #faq_body_button button {
   width: fit-content;
-  height: 25px;
-  border-radius: 10px;
+  height: 30px;
+  border-radius: 5px;
   border: none;
   padding-left: 10px;
   padding-right: 10px;
@@ -632,14 +632,83 @@
   background-color: #6f00ff;
 }
 
+#faq_body_button:hover button {
+  background-color: #6512d2;
+}
+
 #faqs_container {
   width: 100%;
   height: fit-content;
-
+  float: left;
+  display: block;
+  text-align: left;
 }
 
-#faq_container {
+.faq_container {
+  text-align: left;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #a9229e;
+  width: 100%;
+  height: fit-content;
+  border-radius: 5px;
+}
 
+.faq_container p {
+  margin: 0px;
+}
+
+.messages {
+  text-align: center;
+}
+
+#users_body {
+  width: 100%;
+  height: fit-content;
+  min-height: 400px;
+  padding: 25px;
+}
+
+#order_body {
+  width: 100%;
+  height: fit-content;
+  min-height: 400px;
+  padding: 25px;
+  background-color: #da06ff;
+}
+
+.order_container {
+  width: 100%;
+  height: fit-content;
+  padding: 5px;
+  display: block;
+  margin-top: 5px;
+  border-radius: 5px;
+  float: left;
+  overflow: hidden;
+  background-color: #960398;
+}
+
+.order_container p {
+  margin: 0px;
+  display: inline;
+  color: white;
+}
+
+#users_body {
+  @extend #order_body;
+  background-color: #ff06a6;
+}
+
+.user_container {
+  @extend .order_container;
+  background-color: #b91d90;
+}
+
+.user_container p {
+  margin: 0px;
+  display: inline;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -649,7 +718,7 @@
 
     .header_title h1 {
       font-size: 1em;
-      margin-top: 35px;
+      margin-top: 60px;
     }
 
     .header_title {

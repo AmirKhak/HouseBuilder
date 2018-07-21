@@ -31,7 +31,8 @@
     <div id="faqs_container">
       @foreach ($faqs as $faq)
         <div class="faq_container">
-          <p>{{$faq->question}}</p>
+          <p><strong>{{$faq->question}}</strong></p>
+          <p>{{$faq->answer}}</p>
         </div>
       @endforeach
     </div>
