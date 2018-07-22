@@ -24,14 +24,14 @@ class PagesController extends Controller
 
   public function users() {
     if ($this->isCurrentUserAdmin()) {
-      $users = User::latest()->get();
+      $users = User::latest()->paginate(10);
       return view('pages.users')->with('users', $users);
     }
   }
 
   public function orders() {
     if ($this->isCurrentUserAdmin()) {
-      $orders = Order::latest()->get();
+      $orders = Order::latest()->paginate(10);
       return view('pages.orders')->with('orders', $orders);
     }
   }

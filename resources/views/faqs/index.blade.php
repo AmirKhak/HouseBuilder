@@ -31,8 +31,16 @@
     <div id="faqs_container">
       @foreach ($faqs as $faq)
         <div class="faq_container">
-          <p><strong>{{$faq->question}}</strong></p>
-          <p>{{$faq->answer}}</p>
+          <div class="faq_button_container">
+            {!!Form::open(['action' => ['FaqsController@destroy', $faq->id], 'method' => 'POST'])!!}
+              {{Form::hidden('_method', 'DELETE')}}
+              {{Form::submit('Delete', ['class' => 'container_button'])}}
+            {!!Form::close()!!}
+          </div>
+          <div class="faq_text_container">
+            <p><strong>{{$faq->question}}</strong></p>
+            <p>{{$faq->answer}}</p>
+          </div>
         </div>
       @endforeach
     </div>

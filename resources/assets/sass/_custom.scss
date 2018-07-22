@@ -592,6 +592,7 @@
 
 #modal_content {
   border-radius: 10px;
+  background-color: inherit;
 }
 
 #modal_form {
@@ -609,6 +610,7 @@
   min-height: 400px;
   background-color: #aa00ff;
   color: white;
+  overflow: hidden;
 }
 
 #faq_body_button {
@@ -642,9 +644,11 @@
   float: left;
   display: block;
   text-align: left;
+  overflow: hidden;
 }
 
 .faq_container {
+  overflow: hidden;
   text-align: left;
   margin-top: 5px;
   padding: 5px;
@@ -658,8 +662,56 @@
   margin: 0px;
 }
 
+.faq_text_container {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+  overflow: hidden;
+}
+
 .messages {
   text-align: center;
+}
+
+#pagination {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.container_button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.faq_button_container {
+  width: fit-content;
+  height: fit-content;
+  float: right;
+  border-left: 1px dashed white;
+  overflow: hidden;
+  padding: 5px;
+  display: inline-block;
+  border-bottom: 1px dashed white;
+}
+
+.faq_button_container:hover {
+  background-color: #9c4690;
+}
+
+#more_info_modal p {
+  display: block;
+}
+
+#orders_modal_content {
+    border-radius: 10px;
+    background-color: #960398;
+}
+
+#users_modal_content {
+    border-radius: 10px;
+    background-color: #ff06a6;
 }
 
 #users_body {
@@ -667,6 +719,7 @@
   height: fit-content;
   min-height: 400px;
   padding: 25px;
+  overflow: hidden;
 }
 
 #order_body {
@@ -708,6 +761,18 @@
 .user_container p {
   margin: 0px;
   display: inline;
+  color: white;
+}
+
+#user_button_container {
+  height: fit-content;
+  width: fit-content;
+  float: right;
+}
+
+#user_button_container button {
+  background-color: inherit;
+  border: none;
   color: white;
 }
 
