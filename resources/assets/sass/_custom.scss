@@ -592,11 +592,13 @@
 
 #modal_content {
   border-radius: 10px;
-  background-color: inherit;
+  background-color: khaki;
 }
 
 #modal_form {
   width: fit-content;
+  max-width: 90%;
+  overflow: hidden;
   height: fit-content;
   padding: 15px;
   margin: auto;
@@ -689,19 +691,16 @@
   width: fit-content;
   height: fit-content;
   float: right;
-  border-left: 1px dashed white;
+  border-radius: 5px;
+  border: 1px solid white;
   overflow: hidden;
   padding: 5px;
+  margin-left: 1px;
   display: inline-block;
-  border-bottom: 1px dashed white;
 }
 
 .faq_button_container:hover {
   background-color: #9c4690;
-}
-
-#more_info_modal p {
-  display: block;
 }
 
 #orders_modal_content {
@@ -709,9 +708,17 @@
     background-color: #960398;
 }
 
+#orders_modal_content p {
+  display: block;
+}
+
 #users_modal_content {
     border-radius: 10px;
     background-color: #ff06a6;
+}
+
+#users_modal_content p {
+  display: block;
 }
 
 #users_body {
@@ -768,12 +775,39 @@
   height: fit-content;
   width: fit-content;
   float: right;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#user_button_container:hover {
+  background-color: #0000000d;
 }
 
 #user_button_container button {
   background-color: inherit;
   border: none;
   color: white;
+}
+
+.modal_button {
+  background-color: inherit;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.modal_button:hover {
+  background-color: #0000000d;
+}
+
+.user_button_container {
+  @extend .faq_button_container;
+  float: left;
+}
+
+#modal_faq_content {
+  border-radius: 10px;
+  background-color: #662a5e;
 }
 
 @media screen and (max-width: 768px) {

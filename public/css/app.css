@@ -11210,13 +11210,15 @@ a.text-dark:focus {
 
 #modal_content {
   border-radius: 10px;
-  background-color: inherit;
+  background-color: khaki;
 }
 
 #modal_form {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 90%;
+  overflow: hidden;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -11321,7 +11323,8 @@ a.text-dark:focus {
   color: white;
 }
 
-.faq_button_container {
+.faq_button_container,
+.user_button_container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -11329,19 +11332,17 @@ a.text-dark:focus {
   height: -moz-fit-content;
   height: fit-content;
   float: right;
-  border-left: 1px dashed white;
+  border-radius: 5px;
+  border: 1px solid white;
   overflow: hidden;
   padding: 5px;
+  margin-left: 1px;
   display: inline-block;
-  border-bottom: 1px dashed white;
 }
 
-.faq_button_container:hover {
+.faq_button_container:hover,
+.user_button_container:hover {
   background-color: #9c4690;
-}
-
-#more_info_modal p {
-  display: block;
 }
 
 #orders_modal_content {
@@ -11349,9 +11350,17 @@ a.text-dark:focus {
   background-color: #960398;
 }
 
+#orders_modal_content p {
+  display: block;
+}
+
 #users_modal_content {
   border-radius: 10px;
   background-color: #ff06a6;
+}
+
+#users_modal_content p {
+  display: block;
 }
 
 #users_body {
@@ -11419,12 +11428,38 @@ a.text-dark:focus {
   width: -moz-fit-content;
   width: fit-content;
   float: right;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#user_button_container:hover {
+  background-color: #0000000d;
 }
 
 #user_button_container button {
   background-color: inherit;
   border: none;
   color: white;
+}
+
+.modal_button {
+  background-color: inherit;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.modal_button:hover {
+  background-color: #0000000d;
+}
+
+.user_button_container {
+  float: left;
+}
+
+#modal_faq_content {
+  border-radius: 10px;
+  background-color: #662a5e;
 }
 
 @media screen and (max-width: 768px) {

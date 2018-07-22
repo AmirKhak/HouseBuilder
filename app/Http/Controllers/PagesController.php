@@ -36,4 +36,25 @@ class PagesController extends Controller
     }
   }
 
+  public function destroy($id) {
+    if ($this->isCurrentUserAdmin()) {
+      $user = User::find($id);
+      $user->delete();
+      return redirect('/users')->with('success', 'The user has been removed!');
+    }
+  }
+
+  public function mark_as_done($id) {
+    if ($this->isCurrentUserAdmin()) {
+      $order = Order::find($id);
+      $mark = true;
+      if ($order->done) {
+        $mark = false;
+      }
+      $order->done = $mark;
+      $order->save();
+      return redirect('/orders');
+    }
+  }
+
 }

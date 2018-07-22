@@ -7,7 +7,7 @@
       </div>
 
       <div id="faq_create_modal" class="w3-modal" style="display:none;">
-        <div id="modal_content" class="w3-modal-content">
+        <div id="modal_faq_content" class="w3-modal-content">
           <div class="w3-container">
             <div id="modal_form">
               <span onclick="document.getElementById('faq_create_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
@@ -37,10 +37,8 @@
               {{Form::submit('Delete', ['class' => 'container_button'])}}
             {!!Form::close()!!}
           </div>
-          <div class="faq_text_container">
-            <p><strong>{{$faq->question}}</strong></p>
-            <p>{{$faq->answer}}</p>
-          </div>
+          <p><strong>{{$faq->question}}</strong></p>
+          <p>{{$faq->answer}}</p>
         </div>
       @endforeach
     </div>
