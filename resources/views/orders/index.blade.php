@@ -76,6 +76,7 @@
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
               {!! Form::close() !!}
             @else
+              <span onclick="document.getElementById('order_create_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
               <h2>Sorry, You should sign in.</h2>
             @endif
           </div>

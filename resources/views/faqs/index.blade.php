@@ -31,12 +31,14 @@
     <div id="faqs_container">
       @foreach ($faqs as $faq)
         <div class="faq_container">
-          <div class="faq_button_container">
-            {!!Form::open(['action' => ['FaqsController@destroy', $faq->id], 'method' => 'POST'])!!}
-              {{Form::hidden('_method', 'DELETE')}}
-              {{Form::submit('Delete', ['class' => 'container_button'])}}
-            {!!Form::close()!!}
-          </div>
+          @if ($is_current_user_admin)
+            <div class="faq_button_container">
+              {!!Form::open(['action' => ['FaqsController@destroy', $faq->id], 'method' => 'POST'])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Delete', ['class' => 'container_button'])}}
+              {!!Form::close()!!}
+            </div>
+          @endif
           <p><strong>{{$faq->question}}</strong></p>
           <p>{{$faq->answer}}</p>
         </div>
